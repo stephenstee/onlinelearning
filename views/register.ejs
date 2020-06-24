@@ -1,0 +1,43 @@
+<%- include("partials/header")%>
+<style>
+	body{
+		background-color:#a6dcef;
+	}
+	form{
+		background-color: white;
+		box-sizing:border-box;
+		box-shadow: 4px 4px 20px black;
+		padding:40px;
+		border:none;
+		width:50%;
+		margin:50px auto;
+		
+	}
+	input{
+		box-shadow:4px 4px 6px black;
+	}
+	h1{
+		color:white;
+		text-shadow: 5px 5px 10px black;
+	}
+</style>
+<h1 class="display-3 text-center text-uppercase">
+	Register 
+</h1>
+<div class="container">
+<form action="/register" method="POST" style="width:50%; margin: 60px auto;">
+	<div class="form-group">
+	<input type="text" class = "form-control" placeholder="username" name="username">
+	</div>
+	<div class="form-group">
+	<input type="password" class="form-control" placeholder="password" name="password">
+	</div>
+	<button type="submit" class="btn btn-info btn-md ">
+		submit
+	</button>
+	<button type="reset" class="btn btn-danger btn-md">
+		Reset
+	</button>
+</form>
+</div>
+<%- include("partials/footer")%>

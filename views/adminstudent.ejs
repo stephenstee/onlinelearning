@@ -1,0 +1,59 @@
+<%- include("partials/header")%>
+<style>
+	.container{
+		background-color:#436f8a;
+		box-shadow: 2px 2px 10px black;
+	}
+	#box{
+		box-sizing: border-box;
+		box-shadow: 2px 2px 6px black;
+		border:2px solid black;
+		color:white;
+	    margin:5px auto;
+	}
+	li{
+		font-size: 20px;
+		font-weight:normal;
+		list-style-type:none;
+		
+	}
+	#bottom{
+		box-sizing: border-box;
+		border:2px solid black;
+		padding: 10px 0;
+		margin: 20px auto;
+		text-align: center;
+		font-size: 30px;
+		
+	}
+</style>
+<% var x=0; %>
+<h1 class="text-center text-uppercase">Users Details</h1>
+<hr>
+<div class="container">
+	<div class="row">
+		
+<% student.forEach(function(newstudent){ %>
+		<div class="col-md-12 col-sm-12"> 
+	<div id="box">
+<ul>
+	<li>NAME:<%= newstudent.name %></li>
+	<li>DOB:<%= newstudent.dob%></li>
+	<li>ADDRESS:<%= newstudent.address %></li>
+	<li>PHONE.NO:<%= newstudent.phone %></li>
+	<li>DESIGNATION<%= newstudent.designation %></li>
+	<li>FAVROITE-PROGRAMMING-LANGUAGE:<%= newstudent.favlang %></li>
+	
+</ul>
+</div>
+		</div>
+<% x++ %>
+ <%})%>	
+</div>
+	<div id="bottom">
+<div class="text-uppercase">No.Of.Users: <%=x%></div>
+</div>
+</div>
+
+
+<%- include("partials/footer")%>

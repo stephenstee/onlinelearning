@@ -1,0 +1,58 @@
+<%- include("partials/header")%>
+<style>
+	div{
+		margin: 5px 0;
+	}
+	h1{
+		text-decoration-line: underline;
+		text-decoration-color: blue;
+	}
+	form{
+		width:60%;
+		margin: 5px auto;
+	}
+</style>
+<h1 class="text-center text-uppercase">Edit And Update Course</h1>
+<div class=container>
+<form action = "/home/<%=course._id%>?_method=PUT" method="POST" >
+	<div class="form-group">
+	<input type="text" value="<%= course.title%>" class="form-control" name="course[title]">
+    </div>
+	<div class="form-group">
+	<input type="text" value="<%= course.image %>" class="form-control" name="course[image]">
+    </div>
+	<div class="form-group">
+	<input type="text"  value="<%= course.description%>" class="form-control" name="course[description]">
+	</div>
+	<div class="form-group">
+	<input type="text" value="<%= course.material%>" class="form-control" name="course[material]">
+    </div>
+	<div class="form-group">
+	<input type="text" value="<%=course.materialdesc %>" class="form-control" name="course[materialdesc]">
+    </div>
+	<div class="form-group">
+	<input type="text" value="<%=course.materiallink %>" class="form-control" name="course[materiallink]">
+    </div>
+	<div class="form-group">
+	<input type="text" value="<%= course.test%>" class="form-control" name="course[test]">
+    </div>
+	<div class="form-group">
+	<input type="text" value="<%=course.testdesc %>" class="form-control" name="course[testdesc]">
+    </div>
+	<div class="form-group">
+	<input type="text" value="<%=course.testlink %>" class="form-control" name="course[testlink]">
+    </div>
+	<div class="form-group">
+	<input type="text" value="<%= course.exercise %>" class="form-control" name="course[exercise]">
+    </div>
+	<div class="form-group">
+	<input type="text" value="<%=course.exercisedesc %>" class="form-control" name="course[exercisedesc]">
+    </div>
+	<div class="form-group">
+	<input type="text" class="form-control" value="<%=course.exerciselink %>" name="course[exerciselink]">
+    </div>
+<button class="btn btn-md btn-dark " type="submit">UPDATE</button>
+	<button type="reset" class="btn btn-md btn-danger d-inline">RESET</button>
+</form>
+	</div>
+<%- include("partials/footer")%>

@@ -1,0 +1,42 @@
+<%- include("partials/header")%>
+<style>
+	body{
+		background-color:#f7fbe1;
+	}
+	form{
+		background-color:#ffffff;
+		box-sizing:border-box;
+		box-shadow:2px 2px 4px black;
+		width:60%;
+		margin: 40px auto;
+		border:1px solid black;
+		padding:20px;
+	}
+	input{
+		background-color:#d6efc7;
+		box-shadow:2px 2px 6px #07031a;
+	}
+	/* .container{
+		background-color:#ffffff;
+	} */
+</style>
+<div class="container">
+	<h2 class="text-center text-uppercase">
+		Enter your id and password
+	</h2>
+<form action="/admin" method="POST">
+	<div class="form-group">
+		<label>Username:</label>
+	<input type="text" class="form-control" name="username">
+		</div>
+	<div class="form-group">
+		<label>Password:</label>
+	<input type="password" class="form-control" name="password">
+	</div>
+	<button class="btn btn-outline-success btn-block">
+		submit
+	</button>
+</form>
+</div>
+
+<%- include("partials/footer")%>

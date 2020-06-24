@@ -1,0 +1,49 @@
+<%- include("partials/header")%>
+<style>
+	p{
+		font-size: 20px;
+	}
+</style>
+<div class="container mt-5">
+<div class="row">
+	<div class="col-12">
+	<div class="card">
+		<div class="p-5" style="background-color:#4791ff"><h2 class="text-center">Learning Material</h2></div>
+		<div class="card-body">
+<h1 class="card-title"><%= course.material %></h1>
+	<p clas="card-text"><%= course.materialdesc %></p>
+			<a class="btn btn-primary bnt-lg btn-block" href="<%= course.materiallink%>">Let's Go</a>
+	</div>
+		</div>
+	</div>
+	</div>
+</div>
+<div class="container mt-5">
+	<div class="row">
+	<div class="col-12">
+	<div class="card">
+		<div class="p-5 bg-dark"><h2 class="text-center">Exercise</h2></div>
+		<div class="card-body">
+	<h2 class="card-title"><%= course.exercise %></h2>
+	<p class="card-text"><%= course.exercisedesc %></p>
+<a class="btn btn-dark bnt-lg btn-block" href="<%= course.exerciselink%>">Read More</a>
+	</div>
+		</div>
+	</div>
+	</div>
+</div>
+<div class="container mt-5">
+	<div class="row">
+	<div class="col-12">
+	<div class="card">
+		<div class="p-5" style="background-color:#f5112c"><h2 class="text-center">Online Test</h2></div>
+		<div class="card-body">
+	<h3 class="card-title"><%= course.test %></h3>
+	<p class="card-text"><%= course.testdesc %></p>
+			<a class="btn btn-danger bnt-lg btn-block"  href="<%=course.testlink %>">Test Your Skills</a>
+	</div>
+		</div>
+	</div>
+	</div>
+</div>
+<%- include("partials/footer")%>

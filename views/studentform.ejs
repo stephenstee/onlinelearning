@@ -1,0 +1,55 @@
+<%- include("partials/header")%>
+<style>
+	body{
+		background-color:#a6dcef;
+	}
+	div{
+		margin: 5px 0;
+	}
+	h1{
+		
+		text-decoration-line: underline;
+	}
+	form{
+		box-sizing:border-box;
+		box-shadow:4px 4px 8px black;
+		border:2px solid white;
+		width:60%;
+		margin: 5px auto;
+		padding:20px;
+	}
+</style>
+<h1 class="text-center text-uppercase">Enter the Details</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 col-sm-12">
+			<form action="/student" method="POST">
+	<div class="form-group">
+	<input type="text" placeholder="NAME" class="form-control" name="name">
+	</div>
+	<div class="form-group">
+	<input type="text" placeholder="DOB" class="form-control" name="dob">
+	</div>
+	<div class="form-group">
+	<input type="text" placeholder="ADDRESS" class="form-control" name="address">
+	</div>
+	<div class="form-group">
+	<input type="text" placeholder="PHONE" class="form-control" name="phone">
+	</div>
+	<div class="form-group">
+	<input type="text" class="form-control" placeholder="DESIGNATION" name="designation"> 
+	</div>
+	<div class="form-group">
+	<input type="text" placeholder="FAVROITE LANGUAGE" class="form-control" name="favlang">
+	</div>
+	<button type="submit" class="btn btn-md btn-outline-success">
+		Submit
+	</button>
+</form>
+		</div>
+	</div>
+	
+</div>
+
+
+<%- include("partials/footer")%>

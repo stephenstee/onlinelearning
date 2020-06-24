@@ -1,0 +1,36 @@
+<%- include("partials/header")%>
+<style>
+	h1{
+		/* text-transform: uppercase; */
+		text-decoration-line: underline;
+		text-shadow: 2px 2px 4px #000000;
+	
+	}
+	img{
+		width:50%;
+		height:300px;
+	}
+</style>
+<div class="jumbotron display-3">WELCOME TO CODING AREA Angeetha</div>
+<div class="container">
+	<div class="row">
+<% course.forEach(function(newcourse){ %>
+		<div class="col-md-6 col-sm-12">
+		<div class="card border-none my-2">
+		<img src="<%= newcourse.image%>" class="card-img-top m-auto">
+        <div class="card-body">
+	<h1 class="card-title text-uppercase"><%= newcourse.title %></h2>
+	    <p class="card-text" style="font-size:20px; font-weight:normal;"><%= newcourse.description  %><p>
+	    <a href="/home/<%= newcourse._id%>">READ MORE</a>
+        </div>
+			<a href="/home/<%=newcourse._id%>/edit" class="btn btn-warning btn-block">Edit</a>
+			<form action="/home/<%=newcourse._id%>?_method=DELETE" method="POST">
+			<button class="btn btn-danger btn-block">Delete</button>
+			</form>
+	    </div>
+		</div>
+<%})%>
+	</div>
+	</div>
+
+<%- include("partials/footer")%>

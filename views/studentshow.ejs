@@ -1,0 +1,37 @@
+<%- include("partials/header")%>
+<style>
+	img{
+		width:40%;
+		height:500px;
+	}
+	body{
+		background-color:#ddf3f5;
+	}
+	
+</style>
+<h1 class="text-center text-uppercase">Your Profile</h1>
+<div class="container">
+	<div class="row">
+<% if(currentUser && student.author.id.equals(currentUser._id)){ %>
+		<div class="col-md-12 col-sm-12">
+			<div class="card border-none">
+<img src="https://www.pngitem.com/pimgs/m/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png" class="card-img-top m-auto">
+				<div class="card-body">
+<ul class="card-text" style="text-align:left;list-style-type:none;text-decoration-line:underline; font-size:20px;font-weight:normal;">
+	<li>NAME:<%=student.name%></li>
+	<li>DOB:<%=student.dob%></li>
+	<li>ADDRESS:<%=student.address%></li>
+	<li>DESIGNATION:<%= student.designation%></li>
+	<li>FAVOURITE-PROGRAMMING LANG:<%=student.favlang%></li>
+	<li>PHONE.NO:<%= student.phone%></li>
+</ul>
+<a href="/student/<%=student.id%>/edit" class="btn btn-outline-primary btn-block">Edit</a>
+		</div>
+		</div>
+		</div>
+	
+<% } %>
+</div>
+</div>
+
+<%- include("partials/footer")%>

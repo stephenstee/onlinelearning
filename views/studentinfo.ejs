@@ -1,0 +1,19 @@
+<%- include("partials/header")%>
+<style>
+	h1{
+		font-size:40px;
+		font-weight:normal;
+	}
+	body{
+		background-color:#ddf3f5;
+	}
+</style>
+<% student.forEach(function(newstudent){ %>
+<% if(currentUser._id.equals(newstudent.author.id)){ %>
+ <h1><%= newstudent.name %></h1>	
+<a href="/student/<%=newstudent._id%>" class="btn btn-outline-success">CHECK YOUR PROFILE</a>
+ <% } %>
+ <%}) %>
+
+
+<%- include("partials/footer")%>
